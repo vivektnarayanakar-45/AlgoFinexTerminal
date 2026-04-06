@@ -1,0 +1,96 @@
+algo_finex_terminal/
+├── .env.example
+├── docker-compose.yml
+├── README.md
+├── .github/workflows/ci.yml
+├── backend/
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   ├── .env.example
+│   └── app/
+│       ├── __init__.py
+│       ├── main.py
+│       ├── config.py
+│       ├── database.py
+│       ├── models/
+│       │   ├── __init__.py
+│       │   ├── market_data.py
+│       │   ├── portfolio.py
+│       │   ├── options.py
+│       │   ├── strategy.py
+│       │   ├── news.py
+│       │   └── screener.py
+│       ├── schemas/
+│       │   ├── __init__.py
+│       │   ├── market.py
+│       │   ├── portfolio.py
+│       │   ├── options.py
+│       │   ├── strategy.py
+│       │   ├── news.py
+│       │   └── screener.py
+│       ├── routes/
+│       │   ├── __init__.py
+│       │   ├── market.py
+│       │   ├── portfolio.py
+│       │   ├── options.py
+│       │   ├── strategy.py
+│       │   ├── screener.py
+│       │   ├── news.py
+│       │   ├── analytics.py
+│       │   └── command.py
+│       ├── services/
+│       │   ├── __init__.py
+│       │   ├── market_data_service.py
+│       │   ├── websocket_manager.py
+│       │   ├── pricing_service.py
+│       │   ├── sentiment_service.py
+│       │   ├── screener_service.py
+│       │   ├── portfolio_analytics.py
+│       │   ├── redis_client.py
+│       │   └── data_ingestion.py
+│       └── websocket/
+│           ├── __init__.py
+│           └── endpoints.py
+├── frontend/
+│   ├── Dockerfile
+│   ├── package.json
+│   ├── tailwind.config.js
+│   ├── postcss.config.js
+│   ├── tsconfig.json
+│   ├── index.html
+│   └── src/
+│       ├── main.tsx
+│       ├── App.tsx
+│       ├── index.css
+│       ├── components/
+│       │   ├── Dashboard/
+│       │   │   ├── DashboardLayout.tsx
+│       │   │   ├── MarketDashboardWidget.tsx
+│       │   │   ├── ChartingWidget.tsx
+│       │   │   ├── OptionsChainWidget.tsx
+│       │   │   ├── PortfolioAnalyticsWidget.tsx
+│       │   │   ├── NewsSentimentWidget.tsx
+│       │   │   ├── ScreenerWidget.tsx
+│       │   │   ├── AlgoStrategyMonitorWidget.tsx
+│       │   │   └── CommandBar.tsx
+│       │   └── common/
+│       │       ├── Spinner.tsx
+│       │       └── Card.tsx
+│       ├── hooks/
+│       │   ├── useWebSocket.ts
+│       │   ├── useMarketData.ts
+│       │   └── useCommandBar.ts
+│       ├── services/
+│       │   ├── api.ts
+│       │   ├── websocket.ts
+│       │   └── commandService.ts
+│       ├── types/
+│       │   └── index.ts
+│       ├── utils/
+│       │   ├── format.ts
+│       │   └── chartHelpers.ts
+│       ├── contexts/
+│       │   └── WebSocketContext.tsx
+│       └── pages/
+│           └── Terminal.tsx
+└── nginx.conf
